@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://music-platform.com"
+           xmlns:a="http://music-platform.com/artists"
+           targetNamespace="http://music-platform.com"
+           elementFormDefault="qualified">
+    
+    <!-- Importuojama artistų vardų srities schema -->
+    <xs:import namespace="http://music-platform.com/artists" schemaLocation="music_platform_artist_schema.xsd"/>
+    
+    <!-- Pagrindinio elemento apibrėžimas -->
+    <xs:element name="music_platform">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string"/>
+                <xs:element name="founder" type="xs:string"/>
+                <!-- 1. Paprasto tipo (foundedYearType) panaudojimas -->
+                <xs:element name="founded_year" type="foundedYearType"/>
+                <!-- 3.2. Sudėtingo tipo su paprastu turiniu (išplėtimas) panaudojimas -->
+                <xs:element name="subscription_price" type="priceWithCurrencyType"/>
+                <xs:element ref="a:artists"/>
+            </xs:sequence>
+        </xs:complexType>
+        
+        <!-- 8. Raktas (key) ir nuoroda (keyref) -->
+        <!-- Unikalus raktas kiekvienam atlikėjo ID -->
+        <xs:key name="artistKey">
+            <xs:selector xpath="a:artists/a:artist"/>
+            <xs:field xpath="@id"/> 
+        </xs:key>
+        <!-- Unikalus raktas kiekvienam albumo ID -->
+        <xs:key name="albumKey">
+            <xs:selector xpath="a:artists/a:artist/a:albums/a:album"/>
+            <xs:field xpath="@id"/> 
+        </xs:key>
+        
+        <!-- Pavyzdinė nuoroda (keyref), kuri tikrintų, ar featured_album nurodo egzistuojantį albumą -->
+        <!-- pvz xml faile pridedant atributą <featured_album ref="al001"/> -->
+        <!-- <xs:keyref name="albumKeyRef" refer="albumKey">
+             <xs:selector xpath="."/> 
+             <xs:field xpath="featured_album/@ref"/>
+             </xs:keyref> -->
+             
+ </xs:element>
+    
+    <!-- 1. Paprastas tipas, apribojantis standartinį xs:gYear tipą -->
+    <!-- Leidžiami metai yra nuo 1900 iki 2025 (imtinai) -->
+    <xs:simpleType name="foundedYearType">
+        <xs:restriction base="xs:gYear">
+            <xs:minInclusive value="1900"/>
+            <xs:maxInclusive value="2025"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- 3. Sudėtingi tipai su paprastu turiniu -->
+    <!-- 3.2. Išvestas praplėtimu (extension) iš bazinio tipo (xs:decimal) -->
+    <!-- Šis tipas aprašo dešimtainę reikšmę (kainą) ir prideda valiutos atributą -->
+    <xs:complexType name="priceWithCurrencyType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="currency" type="xs:string" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+</xs:schema>

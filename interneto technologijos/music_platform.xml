@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<music_platform xmlns="http://music-platform.com"
+                xmlns:a="http://music-platform.com/artists"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://music-platform.com music_platform_schema.xsd http://music-platform.com/artists music_platform_artist_schema.xsd">
+    <name>Music-Platform</name>
+    <founder>MPCreator</founder>
+    <founded_year>2004</founded_year>
+    <subscription_price currency="EUR">7.99</subscription_price>
+    <a:artists>
+        <a:artist id="ar001">
+            <a:name>Laufey</a:name>
+            <a:home_country>Iceland</a:home_country>
+            <a:debut_year>2020</a:debut_year>
+            <a:albums>
+                <a:album id="al001">
+                    <a:title>Typical of Me EP</a:title>
+                    <a:type>Mini-album</a:type>
+                    <a:release_date>2021-04-30</a:release_date>
+                    <a:song_number>7</a:song_number>
+                    <a:songs>
+                        <a:song track_number="01">
+                            <a:title >Street by Street</a:title>
+                            <a:genre >Jazz</a:genre>
+                            <a:duration>3:44</a:duration>
+                        </a:song>
+                        <a:song track_number="02">
+                            <a:title>Magnolia</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>3:00</a:duration>
+                        </a:song>
+                        <a:song track_number="03">
+                            <a:title>Like the Movies</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>2:42</a:duration>
+                        </a:song>
+                        <a:song track_number="04">
+                            <a:title>I Wish You Love</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>2:35</a:duration>
+                        </a:song>
+                        <a:song track_number="05">
+                            <a:title>James</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>2:55</a:duration>
+                        </a:song>
+                        <a:song track_number="06">
+                            <a:title>Someone New</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>3:18</a:duration>
+                        </a:song>
+                        <a:song track_number="07">
+                            <a:title>Best Friend</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>2:44</a:duration>
+                        </a:song>
+                    </a:songs>
+                </a:album>
+                    <a:album id="al002">
+                    <a:title>Snow White</a:title>
+                    <a:type>Single</a:type>
+                    <a:release_date>2025-08-07</a:release_date>
+                    <a:song_number>4</a:song_number>
+                    <a:songs>
+                        <a:song track_number="01">
+                            <a:title>Snow White</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>3:13</a:duration>
+                        </a:song>
+                        <a:song track_number="02">
+                            <a:title>Lover Girl</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>2:44</a:duration>
+                        </a:song>
+                        <a:song track_number="03">
+                            <a:title>Tough Luck</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>3:12</a:duration>
+                        </a:song>
+                        <a:song track_number="04">
+                            <a:title>Silver Lining</a:title>
+                            <a:genre>Jazz</a:genre>
+                            <a:duration>3:17</a:duration>
+                        </a:song>
+                    </a:songs>
+                </a:album>
+            </a:albums>
+        </a:artist>
+    </a:artists>
+</music_platform>

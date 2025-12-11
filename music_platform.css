@@ -1,0 +1,181 @@
+/*general*/
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* --- ID Selector --- */
+#main-header {
+    background-color: #4d1371;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Class Selector --- */
+.content-card{
+    border: 1px solid #ccc;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* --- Navigation --- */
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #3a0f55;
+    text-align: center;
+}
+nav > ul > li {
+    display: inline-block;
+    margin: 0 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+nav a.active {
+    background-color: #4d1371;
+    border-radius: 4px;
+}
+nav a:hover {
+    background-color: #6d1d9e;
+    border-radius: 4px;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+img {
+    height:300px;
+    width:auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    clear: both;
+    margin-top: 10px;
+}
+table, th, td { border: 1px solid #aaa; }
+th, td { padding: 10px; text-align: left; }
+
+.album-title {
+    background-color: #f4f4f4;
+    vertical-align: top;
+    font-weight: bold;
+}
+.album-meta {
+    display: block;
+    font-size: 0.85em;
+    font-weight: normal;
+    color: #666;
+    margin-top: 5px;
+}
+.note {
+    text-align: center;
+    font-style: italic;
+    background-color: #eaeaea;
+}
+.section-title {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    clear: both;
+}
+
+
+/* --- Form Styling --- */
+label { display: block; margin-bottom: 5px; font-weight: bold; }
+input[type="text"], input[type="email"], input[type="password"],
+input[type="date"], select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+input[required] {
+    border-left: 2px solid #d35400;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.checkbox-row { margin-top: 15px; margin-bottom: 15px; }
+.inline-label {
+    display: inline;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+/* --- Inherit --- */
+button {
+    font-family: inherit;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Price Container */
+.price-display {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* !important */
+
+.highlight-price {
+    color: #d35400 !important;
+    font-size :1.2em !important
+}
+
+.highlight-price {
+    color: #000; /* Black */
+    font-size: 1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 40px;
+}
+footer p { margin: 5px 0; }
+
+/* --- Media Query --- */
+@media (max-width: 600px) {
+    nav > ul > li {
+        display: block;
+        margin: 10px 0;
+        border-bottom: 1px solid #555;
+    }
+    img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+}

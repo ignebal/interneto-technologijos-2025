@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-Platform | Subscribe</title>
+    <link rel="stylesheet" href="music_platform.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <h1>Music-Platform</h1>
+        <p>Founded in 2004 by MPCreator</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="artists.html">Artists & Discography</a></li>
+            <li><a href="subscribe.html" class="active">Subscribe</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-card">
+            <h2>Subscribe Now</h2>
+            
+            <p class="price-display">
+                Monthly Subscription: <strong class="highlight-price">7.99 EUR</strong>
+            </p>
+
+            <form action="#" method="post">
+                
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Create a username" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </p>
+
+                <p>
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment">
+                        <option value="card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="transfer">Bank Transfer</option>
+                    </select>
+                </p>
+
+                <p class="checkbox-row">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="inline-label">
+                        I agree to the Terms of Service
+                    </label>
+                </p>
+
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Music-Platform</p>
+        <p>Contact us at: <strong>support@music-platform.com</strong></p>
+    </footer>
+
+</body>
+</html>
